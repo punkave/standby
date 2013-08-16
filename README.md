@@ -38,6 +38,10 @@ Standby uses files in `/tmp/standby` to keep track of what's already running. We
 
 You need node and npm, of course. That's about it.
 
+## Standby and Stagecoach
+
+Althogh you can use `standby` without it, we had [stagecoach](http://github.com/punkave/stagecoach) in mind when we wrote it. `stagecoach` makes it easy to deploy one or more node apps to an Ubuntu server without a lot of fuss. `standby` is a good companion piece for use during temporary downtime such as during data migration.
+
 ## About P'unk Avenue and Apostrophe
 
 `standby` was created at [P'unk Avenue](http://punkave.com) for use with sites built on Apostrophe, an open-source content management system built on node.js. If you like `standby` you should definitely [check out apostrophenow.org](http://apostrophenow.org). Also be sure to visit us on [github](http://github.com/punkave).
