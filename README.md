@@ -8,6 +8,8 @@ Use it in your deployment scripts to put up a placeholder page on the port numbe
 
 The standby page will automatically refresh until your site comes back.
 
+*The URL in the browser does not change,* so the user typically gets the page they wanted once the site is back up.
+
 ## How to Install
 
 npm install -g standby
@@ -22,13 +24,19 @@ To stop displaying a standby page on port 3000:
 
     standby stop 3000
 
+To substitute your own static content in place of our standby page:
+
+    standby start 3000 --content=/path/to/my/assets/folder
+
+*The page displayed to the user will be `index.html` in the content folder.*
+
 Note that you need to stop `standby` before launching your app again.
 
-Standby uses files in `/tmp/standby` to keep track of what's running.
+Standby uses files in `/tmp/standby` to keep track of what's already running. We use `/tmp` rather than `/var/run` because we hardly ever launch node apps as root.
 
 ### Requirements
 
-You need node, of course. That's about it. Standby was written with Express 3.0 in mind, but doesn't do much, so it may not matter.
+You need node and npm, of course. That's about it.
 
 ## About P'unk Avenue and Apostrophe
 
