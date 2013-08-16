@@ -1,6 +1,6 @@
 {
   "name": "standby",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Displays a simple standby page on the specified port, refreshing until your real site comes back. Great for deployments and data migrations that shouldn't be run while your site is up.",
   "main": "app.js",
   "scripts": {
@@ -19,6 +19,9 @@
     "migration",
     "placeholder"
   ],
+  "bin": {
+    "standby": "./bin/standby"
+  },
   "author": "P'unk Avenue, LLC",
   "license": "MIT",
   "readmeFilename": "README.md",
